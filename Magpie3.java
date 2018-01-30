@@ -1,4 +1,4 @@
-/**
+/**Elton Tran & Michael Pfeiffer
  * A program to carry on conversations with a human user.
  * This version: 
  * <ul><li>
@@ -44,6 +44,16 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if (findKeyword(statement, "I like") >= 0)
+		{
+			if (statement.substring(2,statement.length()).equals("like")){
+			response = "What do you like?";
+			}
+			else {
+				String input = statement.substring(7,statement.length());
+			response = "What do you like about " + input + "?";
+			}
 		}
 		else
 		{
